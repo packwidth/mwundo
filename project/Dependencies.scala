@@ -15,6 +15,13 @@ object Dependencies {
     "io.spray" %% "spray-json" % "1.3.2"
   )
 
+  lazy val circeVersion = "0.9.1"
+  lazy val circe = Seq(
+    "io.circe" %% "circe-core",
+    "io.circe" %% "circe-generic",
+    "io.circe" %% "circe-parser"
+  ).map(_ % circeVersion)
+
   lazy val test = Seq(
     "org.scalatest"           %% "scalatest"                    % "3.0.1",
     "org.scalacheck"          %% "scalacheck"                   % "1.13.4",
